@@ -1,0 +1,39 @@
+{%extends 'base.html'%}
+{%block title%}Yt Video Downloader {%endblock%}
+{%block content %}
+<!-- navbar section -->
+
+{%include 'header.html'%}
+
+<!-- Download Form section -->
+<div class="container-fluid">
+  <form id="download-form" action="{{url_for('home')}}" method="POST">
+    {% with messages  = get_flashed_messages() %}
+    {%if messages %}
+    {%for msg in messages %}
+    <p style="color: green;">{{msg}}</p>
+    {%endfor%}
+    {%endif%}
+    {%endwith%}
+    <div class="row">
+      <h3>Youtube Video Downloader</h3>
+      <div class="col-md-12">
+
+        <input name="url" id="download-input" type="url">
+      </div>
+      <div class="col-md-12">
+
+        <button id="search-button" class="btn btn-primary">Search</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- footer section -->
+<footer >
+
+  {%include 'footer.html'%}
+</footer>
+
+
+{%endblock%}
