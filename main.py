@@ -27,7 +27,6 @@ def download_page():
     try:
         global id
         id = request.args.get("v")
-        print(id)
         d_video = YtDownloader(link=f"https://www.youtube.com/watch?v={id}")
         title = d_video.title
         thumbanail = d_video.thumbnail
