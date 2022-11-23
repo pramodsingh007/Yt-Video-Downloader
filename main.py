@@ -1,9 +1,10 @@
 from flask import Flask, flash,render_template, request, url_for,redirect,get_flashed_messages
 from YoutubeDownloader import YtDownloader
+import os
 
 
 app = Flask(__name__)
-app.secret_key = "pramodthegreat"
+app.secret_key = os.environ.get("SECRET_KEY")
 
 # d= YtDownloader("https://www.youtube.com/watch?v=JGu9PkpU3o8&list=RDMM&index=10")
 # print(d.title)
