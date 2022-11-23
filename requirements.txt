@@ -3,4 +3,4 @@ pytube==12.0.0
 flask==1.1.2
 Jinja2==2.11.3
 pathlib2==2.3.6
-bootstrap==5.2
+
