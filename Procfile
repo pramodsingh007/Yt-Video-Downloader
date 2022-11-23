@@ -1,1 +1,1 @@
-web: node main:app
+web: gunicorn main:app
